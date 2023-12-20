@@ -1,2 +1,59 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { Confetti } from 'svelte-confetti';
+	import Skunk from '$lib/components/Skunk.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import ConfettiOnClick from '$lib/components/ConfettiOnClick.svelte';
+
+	export let data;
+	const { test } = data;
+	let { session } = data;
+
+	console.log(session);
+</script>
+
+<Skunk />
+
+<h1 class="text-xl font-bold">Welcome to SkunkKit</h1>
+
+{#each test as item}
+	<p>{item.id}</p>
+{/each}
+
+{#if session}
+	<p>Logged in 🔓</p>
+{:else}
+	<p>Logged out 🔒</p>
+{/if}
+
+<ul class="flex gap-2">
+	<li>ShadCN</li>
+	<li>---</li>
+	<li>SvelteKit</li>
+	<li>---</li>
+	<li>Supabase(d)*</li>
+	<li>---</li>
+	<li>Typescript</li>
+</ul>
+
+<h3 class="text-lg font-bold">Setup steps</h3>
+
+<p>
+	0. Setup the Supabase CLI locally and login by following <a
+		href="https://supabase.com/docs/guides/cli/getting-started"
+		target="_blank"
+		class="border-2 underline underline-offset-4">this guide</a
+	>
+</p>
+<p>1. Be sure to replace the project id & anon keys in `.env.local`</p>
+<p>2. Update the `npm run gentypes` command in `packages.json` with the project id</p>
+<p>
+	3. Follow the steps <a
+		href="https://supabase.com/docs/guides/auth/server-side/email-based-auth-with-pkce-flow-for-ssr?framework=sveltekit"
+		target="_blank"
+		class="border-2 underline underline-offset-4">here</a
+	> to update the email templates for the SSR auth flow
+</p>
+
+<ConfettiOnClick><Button variant="outline">Noice</Button></ConfettiOnClick>
+
+<p class="italic">*based on what?</p>
