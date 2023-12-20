@@ -1,38 +1,23 @@
-# create-svelte
+1111111111111111111111111111111111111111111''''111111111111111111111
+111111111111111111111111111111111111111''      `11111111111111111111
+111111111111111111111111111111111111' aaa@      11111111111111111111
+1111111111111111111111111111111111'a@@@@"  a    `1111111111111111111
+11111111111111111111111111111111' "@" @  a@@"a   1111111111111111111
+11111111111111111111111111111111,  @ @@ @@@ ' @  1111111111111111111
+111111111111111111111111'''     ''a  ""a a@@a'   1111111111111111111
+111111111111111111111'  a@a@@@aa@@"  a@@@        1111111111111111111
+1111111111111111111' aa#" " """ "   @@@@@@     ,11111111111111111111
+111111111111111111' @"   aa@@@@@@@@a """"    11111111111111111111111
+111111111111111111 @  aaa@@@@@@@@@"          `111111111111111111111P
+111111111111111111 @@@@""@   "   '            `11111111111111111111h
+111111111111111111 @@@                  .      `1111111111111111111o
+111111111111111@@@@@@                    .         `111111111111111e
+11111111111@@@@@@@@"                 '  ,1,        ,111111111111111n
+11111111@@@@@@ @  1,               ,',,11111....:::::::111111111111i
+111111@@@@@@@@"  111,             .11111111:::::::::::::.1111111111x
+11111@@@@@@@ @  11111.               `111.:::::::::::::::.1111111111
+R. Sussman
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# SvelteKit & Supabase Boilerplate
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Everything you need to kick off a SvelteKit + Supabase (SSR Auth) + ShadCN + Tailwind + Typescript project
