@@ -34,14 +34,14 @@
 
 <h3 class="text-lg font-bold">Setup steps</h3>
 
+<p>0. Create an `.env.local` file in the root and add your Supabase project URL & anon key</p>
 <p>
-	0. Setup the Supabase CLI locally and login by following <a
+	1. Setup the Supabase CLI locally and login by following <a
 		href="https://supabase.com/docs/guides/cli/getting-started"
 		target="_blank"
 		class="border-2 underline underline-offset-4">this guide</a
 	>
 </p>
-<p>1. Be sure to replace the project id & anon keys in `.env.local`</p>
 <p>2. Update the `npm run gentypes` command in `packages.json` with the project id</p>
 <p>
 	3. Follow the steps <a
