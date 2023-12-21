@@ -50,6 +50,7 @@
 		class="border-2 underline underline-offset-4">here</a
 	> to update the email templates for the SSR auth flow
 </p>
+<p>4. Uncomment the index.ts, +layouts.server.ts, +layout.ts & +page.server.ts files</p>
 
 <ConfettiOnClick><Button variant="outline">Noice</Button></ConfettiOnClick>
 
