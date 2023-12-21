@@ -1,21 +1,18 @@
 <script lang="ts">
-	import { Confetti } from 'svelte-confetti';
 	import Skunk from '$lib/components/Skunk.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import ConfettiOnClick from '$lib/components/ConfettiOnClick.svelte';
 
 	export let data;
-	const { test } = data;
+	// const { table } = data;
 	let { session } = data;
-
-	console.log(session);
 </script>
 
 <Skunk />
 
 <h1 class="text-xl font-bold">Welcome to SkunkKit</h1>
 
-{#each test as item}
+<!-- {#each test as item}
 	<p>{item.id}</p>
 {/each}
 
@@ -23,7 +20,7 @@
 	<p>Logged in 🔓</p>
 {:else}
 	<p>Logged out 🔒</p>
-{/if}
+{/if} -->
 
 <ul class="flex gap-2">
 	<li>ShadCN</li>
