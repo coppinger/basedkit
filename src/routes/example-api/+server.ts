@@ -1,16 +1,8 @@
-export const GET = async (event) => {
-	// const {
-	// 	url,
-	// 	locals: { getSession }
-	// } = event;
+// Example from https://supabase.com/docs/guides/auth/server-side/creating-a-client?framework=sveltekit&environment=api-route
 
-	// const { user } = await getSession();
+// import { redirect } from '@sveltejs/kit';
 
-	// const { email } = user;
-
-	const options = {
-		status: 404
-	};
-
-	return new Response('🍌', options);
-};
+// export const GET = async (event) => {
+// 	const { url, locals: { supabase } } = event
+// 	...
+// }
