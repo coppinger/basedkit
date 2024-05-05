@@ -1,6 +1,6 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the
 # working directory name when running `supabase init`.
-project_id = "buildstory"
+project_id = "YOUR-PROJECT-ID"
 
 [api]
 enabled = true
@@ -48,7 +48,9 @@ enabled = true
 # Port to use for Supabase Studio.
 port = 54323
 # External URL of the API server that frontend connects to.
-api_url = "http://127.0.0.1"
+api_url = "http://localhost"
+# OpenAI API Key to use for Supabase AI in the Supabase Studio.
+openai_api_key = "env(OPENAI_API_KEY)"
 
 # Email testing server. Emails sent with the local dev setup are not actually sent - rather, they
 # are monitored, and you can view the emails that would have been sent from the web interface.
@@ -71,7 +73,7 @@ enabled = true
 # in emails.
 site_url = "http://localhost:5173"
 # A list of *exact* URLs that auth providers are permitted to redirect to post authentication.
-additional_redirect_urls = ["https://127.0.0.1:3000"]
+additional_redirect_urls = ["http://localhost:5173"]
 # How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604,800 (1 week).
 jwt_expiry = 3600
 # If disabled, the refresh token will never expire.
@@ -86,16 +88,15 @@ enable_manual_linking = false
 
 [auth.email]
 # Allow/disallow new user signups via email to your project.
-enable_signup = true
+enable_signup = false
 # If enabled, a user will be required to confirm any email change on both the old, and new email
 # addresses. If disabled, only the new email is required to confirm.
 double_confirm_changes = true
 # If enabled, users need to confirm their email address before signing in.
 enable_confirmations = false
 
-# Uncomment to customize email template
 [auth.email.template.magic_link]
-subject = "You have been invited dog"
+subject = "You have been invited"
 content_path = "./supabase/templates/magiclink.html"
 
 [auth.sms]
@@ -115,7 +116,6 @@ template = "Your code is {{ .Code }} ."
 # enabled = true
 # uri = "pg-functions://<database>/<schema>/<hook_name>"
 
-
 # Configure one of the supported SMS providers: `twilio`, `twilio_verify`, `messagebird`, `textlocal`, `vonage`.
 [auth.sms.twilio]
 enabled = false
@@ -127,19 +127,19 @@ auth_token = "env(SUPABASE_AUTH_SMS_TWILIO_AUTH_TOKEN)"
 # Use an external OAuth provider. The full list of providers are: `apple`, `azure`, `bitbucket`,
 # `discord`, `facebook`, `github`, `gitlab`, `google`, `keycloak`, `linkedin_oidc`, `notion`, `twitch`,
 # `twitter`, `slack`, `spotify`, `workos`, `zoom`.
-[auth.external.apple]
+# Example:
+[auth.external.twitch]
 enabled = false
-client_id = ""
+client_id = "env(TWITCH_CLIENT_ID)"
+secret = "env(TWITCH_SECRET)"
+redirect_uri = "http://localhost:54321/auth/v1/callback"
 # DO NOT commit your OAuth provider secret to git. Use environment variable substitution instead:
-secret = "env(SUPABASE_AUTH_EXTERNAL_APPLE_SECRET)"
 # Overrides the default auth redirectUrl.
-redirect_uri = ""
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
 # or any other third-party OIDC providers.
-url = ""
 
 [analytics]
-enabled = true
+enabled = false
 port = 54327
 vector_port = 54328
 # Configure one of the supported backends: `postgres`, `bigquery`.
